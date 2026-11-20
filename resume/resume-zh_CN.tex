@@ -1,0 +1,134 @@
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8 Unicode
+% !Mode:: "TeX:UTF-8"
+
+\documentclass{resume}
+\usepackage{zh_CN-Adobefonts_external}
+\usepackage{linespacing_fix}
+\usepackage{cite}
+
+\begin{document}
+\pagenumbering{gobble}
+
+\name{李昊}
+
+\basicInfo{
+  \email{hao612@buaa.edu.cn}
+  \github[LLLeoLi]{https://github.com/LLLeoLi}
+  \phone{(+86) 13844640268}
+}
+
+\section{\faGraduationCap\ 教育背景}
+\datedsubsection{\textbf{香港科技大学（HKUST）}，计算机科学及工程学系，人工智能（博士）}{2027.09 -- 2030.06}
+导师：\href{https://mayrfung.github.io/}{\textcolor{blue}{Yi R. Fung}}
+\datedsubsection{\textbf{北京航空航天大学}，人工智能学院，人工智能（硕士）}{2024.09 -- 2027.06}
+导师：\href{https://shalei120.github.io/}{\textcolor{blue}{沙磊}} \quad\textbar\quad 荣誉：沈元奖章（北航学生最高荣誉）、国家奖学金、学业奖学金
+\datedsubsection{\textbf{北京航空航天大学}，软件学院，软件工程（本科）}{2020.09 -- 2024.06}
+GPA：3.85/4.00 \quad\textbar\quad 荣誉：“挑战杯”特等奖、学业奖学金
+
+\section{\faUsers\ 实习与科研经历}
+
+% ---------------- TikTok ----------------
+\datedsubsection{\textbf{TikTok}}{2026.03 -- 2026.06}
+\role{研究实习生 · Agentic RL}{Mentor：\href{https://ltzheng.github.io/}{\textcolor{blue}{郑龙韬}}}
+\begin{itemize}
+  \item \textbf{ProgAgent：程序化工具调用（PTC）的 Agent 训练系统}（一作，ICLR 2027 在投）：针对直接工具调用（DTC）在长程任务中上下文退化的问题，搭建完整的 PTC 训练系统，包含可拓展环境规模的可验证长程任务生成 pipeline + 轻量 PTC runtime + 两阶段训练。仅用 \textbf{215} 个任务（4 种环境规模）训练，在 4 个 benchmark 上超过同规模基线；MCP-Atlas 上 ProgAgent-14B 达到 \textbf{45.6\%} pass rate（基线为 \textbf{12.4\%}）；跨两种评测 harness，PTC 训练模型均优于 DTC 训练模型。
+\end{itemize}
+
+% ---------------- HKUST RA ----------------
+\datedsubsection{\textbf{香港科技大学（HKUST）}}{2026.01 -- 至今}
+\role{RA · Agentic RL、多模态 Agent}{Advisor：\href{https://jxhe.github.io/}{\textcolor{blue}{何俊贤}}}
+\begin{itemize}
+  \item \textbf{通用 Agentic 环境构建}：面向 \href{https://github.com/hkust-nlp/Toolathlon}{\textcolor{blue}{Toolathlon}}，构建General Agentic task，包含 1000 个 multi-server harbor 格式任务，覆盖 40+ MCP Server，在 GPT 5.6 sol 上取得 70\% 的 pass rate，pass@8 分布适于 RL 训练。\textbf{已交付头部大模型厂商用于训练}。
+  \item \textbf{Mine Odyssey}（二作，ICLR 2027 在投）：基于 Minecraft 重建真实世界地点，构建空间 Agentic 智能评测基准，180 项任务覆盖了 20 个国家和地区的30 个地点，GPT-6 Astra 成功率 85.6\%，opus 5.5 成功率73.9\%, DeepSeek-V4.1-Flash 成功率 23.9\%。
+\end{itemize}
+
+% ---------------- BAAI ----------------
+\datedsubsection{\textbf{北京智源人工智能研究院（BAAI）}}{2025.08 -- 2025.12}
+\role{研究实习生 · 多模态大模型评测}{Mentor：\href{https://openreview.net/profile?id=~Jin-ge_Yao1}{\textcolor{blue}{姚金戈}}}
+\begin{itemize}
+  \item \textbf{SafeSteer}（一作，EMNLP 2026 \textcolor{red}{Oral}）：只在安全关键 token 上做 on-policy 蒸馏以降低对齐税；仅用 \textbf{100} 条有害样本、无需通用数据，在 7 个安全 + 5 个通用 benchmark 上取得更优权衡。
+  \item \textbf{ReVeL}（二作，CVPR 2026）：将多选题改写为可验证开放问答，提升 VLM 强化微调鲁棒性。
+\end{itemize}
+
+% ---------------- 上海 AI Lab ----------------
+\datedsubsection{\textbf{上海人工智能实验室}}{2024.07 -- 2025.07}
+\role{研究实习生 · AI 安全}{Advisor：\href{https://amandajshao.github.io}{\textcolor{blue}{邵婧}}}
+\begin{itemize}
+  \item \textbf{VLSBench}（二作，ACL 2025）：揭示当前图文 benchmark 的文本泄露现象，在文本查询不泄露视觉风险信息的前提下评测视觉语言模型的安全性。
+  \item \textbf{ActorBreaker}（共一/学生一作，\textcolor{red}{ACL 2025 Outstanding Paper}）：利用自然分布偏移构造多轮攻击，揭示模型预训练的安全漏洞，并构建多轮安全数据用于防御。
+  \item \textbf{LARF}（一作，EMNLP 2025）：用安全敏感层表征筛出破坏对齐的微调数据，缓解微调后的安全退化。
+  
+\end{itemize}
+
+% ---------------- 清华 CoAI ----------------
+\datedsubsection{\textbf{清华大学 CoAI 实验室}}{2023.10 -- 2025.01}
+\role{研究实习生 · 大模型安全}{Advisor：\href{https://coai.cs.tsinghua.edu.cn/hml}{\textcolor{blue}{黄民烈}}}
+\begin{itemize}
+  \item \textbf{ASETF}（共一，EMNLP 2024 Oral）：将对抗后缀嵌入翻译为流畅文本，实现高效越狱。
+  \item \textbf{AISafetyLab}：一站式 AI 安全开源框架（攻击/防御/评测），GitHub \textbf{250+} Star。
+\end{itemize}
+
+
+\section{\faFile\ 论文发表}
+\begin{enumerate}
+
+\item \datedsubsection{\textbf{ProgAgent: Learning Tool Orchestration through Programmatic Training}}{[\href{https://arxiv.org/pdf/2610.14774}{\textcolor{blue}{论文}}]}
+\role{ICLR 2027 在投}{第一作者}
+\par\noindent 简介：RL 环境构建，通过程序化工具调用（programmatic tool calling）训练 Agent 工具编排能力。
+
+\item \datedsubsection{\textbf{SafeSteer: Localized On-Policy Distillation for Efficient Safety Alignment}}{[\href{https://arxiv.org/pdf/2606.02530}{\textcolor{blue}{论文}}]}
+\role{EMNLP 2026 \textcolor{red}{Oral}}{第一作者}
+\par\noindent 简介：将安全行为蒸馏到选定的关键 token 上，在实现安全对齐的同时保留模型通用能力。
+
+\item \datedsubsection{\textbf{Layer-Aware Representation Filtering: Purifying Finetuning Data to Preserve LLM Safety Alignment}}{[\href{https://arxiv.org/pdf/2507.18631}{\textcolor{blue}{论文}}]}
+\role{EMNLP 2025 Main}{第一作者}
+\par\noindent 简介：利用安全敏感层的表征，筛选破坏安全对齐的微调数据。
+
+\item \datedsubsection{\textbf{LLMs know their vulnerabilities: Uncover Safety Gaps through Natural Distribution Shifts}}{[\href{https://arxiv.org/pdf/2410.10700v2}{\textcolor{blue}{论文}}]}
+\role{ACL 2025 \textcolor{red}{Outstanding Paper}}{共同一作（学生一作）}
+\par\noindent 简介：ActorBreaker 借助多轮交互中的自然分布偏移，揭示大模型的安全漏洞。
+
+\item \datedsubsection{\textbf{ASETF: A Novel Method for Jailbreak Attack on LLMs through Translate Suffix Embeddings}}{[\href{https://aclanthology.org/2024.emnlp-main.157.pdf}{\textcolor{blue}{论文}}]}
+\role{EMNLP 2024 Oral}{共同一作}
+\par\noindent 简介：将对抗后缀嵌入翻译为流畅文本，实现高效的大模型越狱攻击。
+
+\item \datedsubsection{\textbf{Mine Odyssey: Benchmarking Spatial Agentic Intelligence in the Wild}}{[\href{https://arxiv.org/pdf/2610.11328}{\textcolor{blue}{论文}}]}
+\role{ICLR 2027 在投}{第二作者}
+\par\noindent 简介：基于 Minecraft 中对真实世界地点的重建，评测智能体的空间智能。
+
+\item \datedsubsection{\textbf{Be Your Own Red Teamer: Safety Alignment via Self-Play and Reflective Experience Replay}}{[\href{https://arxiv.org/pdf/2601.10589}{\textcolor{blue}{论文}}]}
+\role{ACL 2026 Findings}{第三作者}
+\par\noindent 简介：SSP 通过对抗式自博弈与反思式经验回放增强大模型的安全防御能力。
+
+\item \datedsubsection{\textbf{Beyond Multiple Choice: Verifiable OpenQA for Robust Vision-Language RFT}}{[\href{https://arxiv.org/pdf/2511.17405}{\textcolor{blue}{论文}}]}
+\role{CVPR 2026}{第二作者}
+\par\noindent 简介：ReVeL 将多选题转化为可验证的开放式问答，提升视觉语言模型强化微调的鲁棒性。
+
+\item \datedsubsection{\textbf{DiffusionAttacker: Diffusion-Driven Prompt Manipulation for LLM Jailbreak}}{[\href{https://arxiv.org/pdf/2412.17522}{\textcolor{blue}{论文}}]}
+\role{EMNLP 2025 Oral（前 3\%）}{第二作者}
+\par\noindent 简介：利用扩散模型进行语义保持的改写，生成流畅且多样的越狱提示。
+
+\item \datedsubsection{\textbf{VLSBench: Unveiling Visual Leakage in Multimodal Safety}}{[\href{https://arxiv.org/pdf/2411.19939v3}{\textcolor{blue}{论文}}]}
+\role{ACL 2025 Main}{第三作者}
+\par\noindent 简介：VLSBench 在文本查询不泄露视觉风险信息的前提下评测视觉语言模型的安全性。
+
+\end{enumerate}
+
+\section{\faFile\ 开源项目}
+\begin{enumerate}
+    \item \datedsubsection{\textbf{Toolathlon}}{[\href{https://github.com/hkust-nlp/Toolathlon}{\textcolor{blue}{项目}}]}
+    GitHub Star \textbf{\textcolor{red}{500+}} | [ICLR 2026] The Tool Decathlon：面向多样化、真实场景、长程任务执行的语言智能体评测基准。
+    \item \datedsubsection{\textbf{thu-coai/AISafetyLab}}{[\href{https://github.com/thu-coai/AISafetyLab}{\textcolor{blue}{项目}}]}
+    GitHub Star \textbf{\textcolor{red}{250+}} | 涵盖安全攻击、防御、评测与论文列表的一站式 AI 安全框架。
+    \item \datedsubsection{\textbf{RAPTOR}}{[\href{https://github.com/parthsarthi03/raptor}{\textcolor{blue}{项目}}]}
+    GitHub Star \textbf{\textcolor{red}{1.8k+}} | [ICLR 2023] RAPTOR（Recursive Abstractive Processing for Tree-Organized Retrieval，递归摘要式树状检索）官方实现。
+\end{enumerate}
+
+\section{\faUser\ 学术服务}
+\begin{itemize}
+    \item 审稿人：COLM、ICLR、ACL、EMNLP、NAACL、AAAI、WWW
+    \item 校内：北京航空航天大学软件学院、人工智能学院课程助教
+\end{itemize}
+
+\end{document}
